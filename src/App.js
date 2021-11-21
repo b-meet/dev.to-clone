@@ -6,12 +6,16 @@ import "./styles/main.scss";
 
 function App() {
 	return (
-		<main>
-			<Navigation />
-			<LeftSide />
-			<Center />
-			<RightSide />
-		</main>
+		<>
+			<header className='nav'>
+				<Navigation />
+			</header>
+			<main>
+				<LeftSide />
+				<Center />
+				<RightSide />
+			</main>
+		</>
 	);
 }
 export default App;

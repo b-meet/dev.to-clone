@@ -1,0 +1,24 @@
+@import "./variables.scss";
+
+/*primarily mixins for the global navbar*/
+
+@mixin global-nav-child($justify-content) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: center;
+}
+
+@mixin nav-logo-bg($font-size) {
+	width: 2.3rem;
+	height: 2.3rem;
+	border-radius: 50%;
+	font-size: $font-size;
+	color: $primary-lighest;
+	cursor: pointer;
+	transition: all 150ms linear;
+}
+
+@mixin nav-logo-hover($color) {
+	background: $primary-dark-2;
+	color: $color;
+}
