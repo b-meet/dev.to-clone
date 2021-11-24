@@ -1,6 +1,5 @@
 import React from "react";
 import { FaDev, FaSearch, FaBell } from "react-icons/fa";
-import { BiMessageSquareCheck } from "react-icons/bi";
 import { IconContext } from "react-icons";
 
 const Navigation = () => {
