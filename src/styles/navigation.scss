@@ -34,8 +34,12 @@
 	height: 2.6rem;
 	padding: 0.5rem;
 	border-radius: $radius;
-	color: $primary-ligher;
+	color: $primary-lighter;
 	transition: all 300ms;
+
+	&:hover {
+		border: 1px solid $primary-light-2;
+	}
 
 	&:focus {
 		background: $primary-dark;

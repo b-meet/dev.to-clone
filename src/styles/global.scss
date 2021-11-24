@@ -8,13 +8,14 @@
 
 body {
 	background-color: $primary-dark;
-	color: $primary-ligher;
+	color: $primary-lighter;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
 	font-size: $Btn-Font-Size;
 	text-decoration: none;
+	color: $primary-light;
 }
 
 h1 {

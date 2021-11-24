@@ -1,0 +1,126 @@
+@import "./variables.scss";
+@import "./global.scss";
+
+.complete-leftnav-container {
+	width: clamp(13rem, 17.2%, 20rem);
+}
+
+.main-navigation {
+	a {
+		@include leftnav-anchor;
+	}
+}
+
+.other-content-container {
+	a {
+		@include leftnav-anchor;
+	}
+	h3 {
+		margin: 1.6rem 0.5rem 0.9rem;
+		font-size: 1rem;
+	}
+}
+
+.social-media-list-container {
+	display: flex;
+	margin: 1.5rem auto;
+	justify-content: flex-start;
+
+	li {
+		margin-left: 1rem;
+		transform: scale(1);
+		transition: 200ms all linear;
+
+		&:hover {
+			color: $primary-lighest;
+			transform: scale(1.2);
+		}
+	}
+}
+
+.tags {
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.5rem 0.75rem;
+		margin: 0.6rem auto;
+
+		h3 {
+			text-transform: capitalize;
+			font-size: 1.1rem;
+		}
+
+		.settings {
+			outline: none;
+			border: none;
+			font-size: 1.3rem;
+			display: flex;
+			padding: 0.2rem;
+			background: inherit;
+			color: $primary-light;
+			cursor: pointer;
+
+			:hover {
+				color: $primary-lighter;
+			}
+		}
+	}
+}
+
+.tags-list-container {
+	max-height: 17rem;
+	overflow: auto;
+
+	a {
+		@include leftnav-anchor;
+		text-transform: none;
+	}
+
+	li {
+		margin: 0 0 0 0.5rem;
+	}
+}
+
+.get-stickers {
+	@include bottom-posters;
+
+	img {
+		width: 100%;
+		border-radius: $radius;
+	}
+
+	h1 {
+		margin: 1.5rem auto;
+		text-transform: capitalize;
+
+		a {
+			color: $secondary-nice-blue;
+			font-size: 1.36rem;
+		}
+	}
+}
+
+.forum {
+	@include bottom-posters;
+
+	a {
+		color: $secondary-nice-blue;
+	}
+
+	.list {
+		margin: 0.6rem 0 1.4rem;
+		font-weight: bold;
+	}
+	.last-poster-list-container {
+		li {
+			list-style-type: disc;
+			margin-left: 2rem;
+
+			a {
+				color: $secondary-nice-blue;
+				font-size: 1rem;
+			}
+		}
+	}
+}
