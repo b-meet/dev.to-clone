@@ -1,7 +1,6 @@
-@import "./variables.scss";
-@import "./mixins.scss";
-
 .nav-container {
+	position: fixed;
+	width: 100%;
 	height: 3.5rem;
 	background: $primary-dark-3;
 	padding: 0.2rem 2rem;
@@ -29,7 +28,7 @@
 #searchbar {
 	border: 1px solid $primary-dark-7;
 	outline: none;
-	width: clamp(22rem, 26.5rem, 26.5rem);
+	width: 26.5rem;
 	background: $primary-dark-5;
 	height: 2.6rem;
 	padding: 0.5rem;

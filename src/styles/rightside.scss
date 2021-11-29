@@ -1,0 +1,129 @@
+.rightside-container {
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(8, max-content);
+	gap: 1rem 1rem;
+
+	section {
+		@include rightside-poster-bg;
+
+		header {
+			h2 {
+				margin: 1rem;
+				font-size: 1.2rem;
+			}
+		}
+
+		ul {
+			li {
+				margin: 0;
+				padding: 1rem;
+				border-top: 1px solid $primary-darkest;
+
+				p {
+					margin-top: 0.4rem;
+					font-size: 0.8rem;
+					color: $primary-light-1;
+				}
+
+				.para-containing-new {
+					background: $secondary-light-blue;
+					width: max-content;
+					line-height: 1;
+					font-size: 0.7rem;
+					color: $primary-lighter;
+					padding: 0.2rem;
+					border-radius: $radius;
+				}
+
+				&:hover {
+					cursor: pointer;
+					background: $primary-darkest;
+					a {
+						color: $secondary-light-blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+.first-forem {
+	padding: 1rem;
+	h2 {
+		font-size: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.background-less-blue-btn {
+		@include rightside-bgless-buttons;
+		color: $secondary-nice-blue;
+	}
+}
+
+.second-github-dev {
+	img {
+		width: 100%;
+		border-radius: $radius;
+	}
+
+	.background-less-white-btn {
+		@include rightside-bgless-buttons;
+		margin: 1rem;
+
+		&:hover {
+			color: $secondary-nice-blue;
+		}
+	}
+
+	.btn-container {
+		display: flex;
+		flex-direction: column;
+		margin-top: 0.5rem;
+
+		.blue-bg-submit-btn {
+			@include rightside-withbg-buttons;
+			background: $secondary-light-blue;
+			color: $primary-dark-1;
+
+			&:hover {
+				background: $secondary-blue;
+			}
+		}
+
+		.grey-bg-btn {
+			@include rightside-withbg-buttons;
+			background: $primary-dark-5;
+			margin-bottom: 1rem;
+
+			&:hover {
+				background: $primary-dark-7;
+			}
+		}
+	}
+}
+
+.third-listings {
+	header {
+		@include global-nav-child(space-between);
+		margin: 1rem;
+
+		a {
+			color: $secondary-nice-blue;
+		}
+	}
+
+	.background-less-white-btn {
+		@include rightside-bgless-buttons;
+		font-weight: normal;
+		border-top: 1px solid $primary-darkest;
+		border-radius: 0;
+		padding: 0.6rem;
+		width: 100%;
+
+		&:hover {
+			color: $secondary-nice-blue;
+		}
+	}
+}
