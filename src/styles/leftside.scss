@@ -1,8 +1,6 @@
-@import "./variables.scss";
-@import "./global.scss";
-
 .complete-leftnav-container {
-	width: clamp(13rem, 17.2%, 20rem);
+	width: 17rem;
+	max-width: 100%;
 }
 
 .main-navigation {

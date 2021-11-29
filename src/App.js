@@ -10,7 +10,7 @@ function App() {
 			<header className='nav'>
 				<Navigation />
 			</header>
-			<main>
+			<main className='main-site-container'>
 				<LeftSide />
 				<Center />
 				<RightSide />

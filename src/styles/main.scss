@@ -8,3 +8,14 @@
 @import "./skeleton.scss";
 @import "./article.scss";
 @import "./rightside.scss";
+
+.main-site-container {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr;
+	grid-gap: 1rem 1rem;
+	padding: 4.45rem 2rem 0 2rem;
+	width: 100vw;
+	max-width: 1400px;
+	margin: 0 auto;
+}
