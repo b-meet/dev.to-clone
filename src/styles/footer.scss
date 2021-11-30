@@ -1,0 +1,35 @@
+.outside-footer-container {
+	background: $primary-darkest;
+}
+
+.footer-container {
+	width: 60%;
+	margin: 0 auto;
+	padding: 4rem 1rem;
+	text-align: center;
+
+	.footer-last-paragraphs-container {
+		color: $primary-light;
+		font-size: 0.9rem;
+		margin: 2rem 0 1rem;
+	}
+
+	a {
+		font-size: 0.9rem;
+		font-weight: bolder;
+		color: $primary-lighter;
+		cursor: pointer;
+
+		&:hover {
+			color: $secondary-light-blue;
+		}
+	}
+
+	.forem-link-logo {
+		font-size: 1rem;
+		color: $secondary-green-forem-logo;
+		&:hover {
+			color: $secondary-green-forem-logo;
+		}
+	}
+}
