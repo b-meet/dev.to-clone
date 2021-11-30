@@ -1,4 +1,6 @@
-/*primarily mixins for the global navbar secondarily for rightside third section listing*/
+/*primarily mixins for the global navbar secondarily for rightside third section listing 
+  and also for left-nav settings btn
+*/
 
 @mixin global-nav-child($justify-content) {
 	display: flex;

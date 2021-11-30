@@ -122,27 +122,27 @@ const LeftSide = () => {
 			<nav>
 				<ul className='social-media-list-container'>
 					<li>
-						<a href=''>
+						<a title='Twitter' href=''>
 							<FaTwitter />
 						</a>
 					</li>
 					<li>
-						<a href=''>
+						<a title='Facebook' href=''>
 							<FaFacebookSquare />
 						</a>
 					</li>
 					<li>
-						<a href=''>
+						<a title='Github' href=''>
 							<FaGithub />
 						</a>
 					</li>
 					<li>
-						<a href=''>
+						<a title='Instagram' href=''>
 							<RiInstagramFill />
 						</a>
 					</li>
 					<li>
-						<a href=''>
+						<a title='Twitch' href=''>
 							<FaTwitch />
 						</a>
 					</li>
@@ -151,7 +151,7 @@ const LeftSide = () => {
 			<nav className='tags'>
 				<div>
 					<h3>my tags</h3>
-					<button className='settings'>
+					<button title='Customise tag priority' className='settings'>
 						<RiSettingsLine />
 					</button>
 				</div>
