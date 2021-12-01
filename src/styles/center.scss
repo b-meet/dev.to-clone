@@ -1,4 +1,22 @@
-.center {
-	background: tan;
-	width: 40rem;
+.site-center {
+}
+
+.central-nav {
+	ul {
+		@include global-nav-child(flex-start);
+		li {
+			margin: 0;
+			a {
+				@include leftnav-anchor;
+				padding: 0.5rem 0.75rem;
+
+				&:active {
+					font-weight: bolder;
+				}
+				&:visited {
+					font-weight: bolder;
+				}
+			}
+		}
+	}
 }

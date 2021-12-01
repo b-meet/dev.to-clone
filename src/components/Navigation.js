@@ -36,7 +36,7 @@ const Navigation = () => {
 				<li className='notification'>
 					<FaBell />
 				</li>
-				<li>
+				<li className='li-img-container'>
 					<div className='img-container'>
 						<img
 							src=' https://res.cloudinary.com/practicaldev/image/fetch/s--y06-8rMd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/583243/b0929333-dcf7-48ad-a59d-0d1acc98321f.jpg'
