@@ -1,4 +1,5 @@
 .site-center {
+	width: 100%;
 }
 
 .central-nav {
@@ -10,11 +11,9 @@
 				@include leftnav-anchor;
 				padding: 0.5rem 0.75rem;
 
-				&:active {
-					font-weight: bolder;
-				}
-				&:visited {
-					font-weight: bolder;
+				&:hover {
+					background: $primary-darkest;
+					color: $secondary-nice-blue;
 				}
 			}
 		}

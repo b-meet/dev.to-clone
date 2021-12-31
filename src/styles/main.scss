@@ -12,10 +12,10 @@
 
 .main-site-container {
 	display: grid;
-	grid-template-columns: max-content 2fr 1fr;
+	grid-template-columns: 250px 2fr 1fr;
 	grid-template-rows: 1fr;
-	grid-gap: 1rem 1rem;
-	padding: 5rem 3rem 0 3rem;
+	grid-gap: 1rem;
+	padding: 4.5rem 3rem 0 3rem;
 	max-width: 1400px;
 	margin: 0 auto;
 }

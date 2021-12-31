@@ -14,7 +14,6 @@
 	border-radius: 50%;
 	font-size: $font-size;
 	color: $primary-lighest;
-	cursor: pointer;
 	transition: all 150ms linear;
 }
 
@@ -28,7 +27,7 @@
 @mixin leftnav-anchor {
 	display: flex;
 	align-items: center;
-	padding: 0.5rem;
+	padding: 0.545rem;
 	border-radius: $radius;
 	text-transform: capitalize;
 
@@ -48,7 +47,7 @@
 	border-radius: $radius;
 	border: 1px solid $primary-dark-2;
 	padding: 1rem;
-	margin-top: 1.7rem;
+	margin-top: 1rem;
 }
 
 /* mixin for right side sections*/
@@ -60,6 +59,7 @@
 	border: 1px solid $primary-dark-2;
 }
 
+/* Also used for reactions section btns in center */
 @mixin rightside-bgless-buttons {
 	cursor: pointer;
 	background: inherit;
