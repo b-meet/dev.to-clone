@@ -1,6 +1,37 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import Article from "./Article";
+import SkeletonUI from "./SkeletonUI";
+
+const url = "https://dev.to/api/articles/latest";
 
 const Center = () => {
+	const [isLoading, setIsLoading] = useState(true);
+	const [isError, setIsError] = useState(false);
+	const [info, setInfo] = useState([]);
+
+	useEffect(() => {
+		const getData = async () => {
+			const resp = await fetch(url);
+			if (resp.status >= 200 && resp.status <= 299) {
+				const data = await resp.json();
+				setIsLoading(false);
+				setInfo(data);
+			} else {
+				setIsError(true);
+			}
+		};
+		getData();
+	}, []);
+
+	if (isLoading) {
+		return <h2>Loading...</h2>;
+	}
+
+	if (isError) {
+		return <h2>Error...</h2>;
+	}
+
 	return (
 		<section className='site-center'>
 			<header>
@@ -18,32 +49,7 @@ const Center = () => {
 					</ul>
 				</nav>
 			</header>
-			<main className='article-container'>
-				<article className='article-content-container'>
-					<header className='title-date-profile'>
-						<img src='' alt='profile' className='profile' />
-						<h4 className='title'></h4>
-						<p className='date'>
-							<time></time>
-						</p>
-					</header>
-					<main className='article-info'>
-						<h2 className='name-of-article'></h2>
-						<ul className='related-tags'>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-					</main>
-					<footer className='interation-container'>
-						<p></p>
-						<p></p>
-						<time></time>
-						<p></p>
-					</footer>
-				</article>
-			</main>
+			{isLoading || <Article articles={info} />}
 		</section>
 	);
 };
