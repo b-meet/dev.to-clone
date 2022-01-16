@@ -7,7 +7,7 @@ const Article = ({ articles }) => {
 		<section className='content-container'>
 			{articles.map((info) => {
 				return (
-					<article className='article-info'>
+					<article className='article-info' key={info.id}>
 						<img
 							className='cover-image'
 							src={info.social_image}
@@ -19,7 +19,7 @@ const Article = ({ articles }) => {
 								<div className='username-publish-date'>
 									<h5>{info.user.name}</h5>
 									<p>
-										<date>published on {info.readable_publish_date}</date>
+										<span>published on {info.readable_publish_date}</span>
 									</p>
 								</div>
 							</header>
@@ -30,9 +30,9 @@ const Article = ({ articles }) => {
 									</a>
 								</h3>
 								<ul>
-									{info.tag_list.map((tag) => {
+									{info.tag_list.map((tag, index) => {
 										return (
-											<li>
+											<li key={index}>
 												<a href=''># {tag}</a>{" "}
 											</li>
 										);

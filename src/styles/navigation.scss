@@ -20,6 +20,7 @@
 .dev-logo {
 	margin-top: 0.2rem;
 	font-size: 3rem;
+	cursor: pointer;
 
 	&:hover {
 		color: $primary-light;
@@ -60,11 +61,13 @@
 	@include nav-logo-bg(1.3rem);
 	background: none;
 	border: none;
-	outline: none;
 	cursor: pointer;
+	border-radius: $radius;
+	height: 95%;
+	width: 2.5rem;
 	position: absolute;
-	right: 0.5rem;
-	top: 0.2rem;
+	right: 1px;
+	top: 1px;
 
 	&:hover {
 		@include nav-logo-hover("initail");
@@ -116,9 +119,8 @@
 	height: 3rem;
 }
 
-.img-container:hover .profile-picture,
 .profile-picture:hover {
-	outline: 4px solid $primary-darkest;
+	outline: 4px solid $primary-dark-2;
 }
 
 .profile-picture {
@@ -126,11 +128,6 @@
 	height: 2rem;
 	border-radius: 50%;
 	cursor: pointer;
-}
-
-.img-container:hover + .drop-down,
-.drop-down:hover {
-	display: block;
 }
 
 .drop-down {
@@ -143,7 +140,6 @@
 	border-radius: $radius;
 	padding: 0.5rem;
 	cursor: pointer;
-	display: none;
 
 	.username-li {
 		text-transform: none;
@@ -178,4 +174,18 @@
 hr {
 	opacity: 0.1;
 	margin: 0.5rem 0;
+}
+
+@media (max-width: 830px) {
+	.input-container {
+		display: none;
+	}
+
+	.nav-container {
+		padding: 0.1rem 0.5rem;
+	}
+
+	.drop-down {
+		right: 1rem;
+	}
 }

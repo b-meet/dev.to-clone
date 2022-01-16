@@ -1,5 +1,5 @@
 .complete-leftnav-container {
-	width: 16.2rem;
+	width: 100%;
 }
 
 .main-navigation {
@@ -122,5 +122,11 @@
 				font-size: 1rem;
 			}
 		}
+	}
+}
+
+@media (max-width: 830px) {
+	.complete-leftnav-container {
+		display: none;
 	}
 }
