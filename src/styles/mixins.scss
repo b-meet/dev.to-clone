@@ -18,8 +18,8 @@
 }
 
 @mixin nav-logo-hover($color) {
-	background: $primary-dark-2;
-	color: $color;
+	background: $secondary-rare-blue;
+	color: $secondary-lighter-blue;
 }
 
 /* mixin for the left nav */
@@ -78,7 +78,6 @@
 	margin: 0.2rem 1rem;
 	cursor: pointer;
 	font-size: 1rem;
-	font-weight: bolder;
 	border-radius: $radius;
 	color: $primary-light;
 	text-transform: capitalize;

@@ -1,8 +1,11 @@
 import React from "react";
 import { FaDev, FaSearch, FaBell } from "react-icons/fa";
 import { IconContext } from "react-icons";
+import { useState } from "react";
 
 const Navigation = () => {
+	const [showDropDown, setShowDropDown] = useState(false);
+
 	return (
 		<nav className='nav-container'>
 			<ul className='leftside-nav'>
@@ -37,26 +40,31 @@ const Navigation = () => {
 					<FaBell />
 				</li>
 				<li className='li-img-container'>
-					<div className='img-container'>
+					<div
+						className='img-container'
+						onClick={() => setShowDropDown(!showDropDown)}
+					>
 						<img
 							src=' https://res.cloudinary.com/practicaldev/image/fetch/s--y06-8rMd--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/583243/b0929333-dcf7-48ad-a59d-0d1acc98321f.jpg'
 							alt='profile'
 							className='profile-picture'
 						/>
 					</div>
-					<ul className='drop-down'>
-						<li className='username-li'>
-							<h4>b-meet</h4>
-							<p>@meetbhalodiya</p>
-						</li>
-						<hr />
-						<li>dashboard</li>
-						<li>create post</li>
-						<li>reading list</li>
-						<li>settings</li>
-						<hr />
-						<li>signout</li>
-					</ul>
+					{showDropDown && (
+						<ul className='drop-down'>
+							<li className='username-li'>
+								<h4>b-meet</h4>
+								<p>@meetbhalodiya</p>
+							</li>
+							<hr />
+							<li>dashboard</li>
+							<li>create post</li>
+							<li>reading list</li>
+							<li>settings</li>
+							<hr />
+							<li>signout</li>
+						</ul>
+					)}
 				</li>
 			</ul>
 		</nav>

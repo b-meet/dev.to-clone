@@ -1,5 +1,6 @@
 .outside-footer-container {
 	background: $primary-darkest;
+	width: 100%;
 }
 
 .footer-container {
@@ -31,5 +32,11 @@
 		&:hover {
 			color: $secondary-green-forem-logo;
 		}
+	}
+}
+
+@media (max-width: 830px) {
+	.footer-container {
+		width: 95%;
 	}
 }

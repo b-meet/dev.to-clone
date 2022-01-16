@@ -2,35 +2,20 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Article from "./Article";
 import SkeletonUI from "./SkeletonUI";
+import axios, { Axios } from "axios";
 
-const url = "https://dev.to/api/articles/latest";
-
-const Center = () => {
-	const [isLoading, setIsLoading] = useState(true);
-	const [isError, setIsError] = useState(false);
+const Center = (pageNumber) => {
 	const [info, setInfo] = useState([]);
 
 	useEffect(() => {
-		const getData = async () => {
-			const resp = await fetch(url);
-			if (resp.status >= 200 && resp.status <= 299) {
-				const data = await resp.json();
-				setIsLoading(false);
-				setInfo(data);
-			} else {
-				setIsError(true);
-			}
-		};
-		getData();
+		axios({
+			method: "GET",
+			url: "https://dev.to/api/articles/latest",
+			params: {
+				page: pageNumber,
+			},
+		}).then((resp) => setInfo(resp.data));
 	}, []);
-
-	if (isLoading) {
-		return <h2>Loading...</h2>;
-	}
-
-	if (isError) {
-		return <h2>Error...</h2>;
-	}
 
 	return (
 		<section className='site-center'>
@@ -49,7 +34,7 @@ const Center = () => {
 					</ul>
 				</nav>
 			</header>
-			{isLoading || <Article articles={info} />}
+			{<Article articles={info} />}
 		</section>
 	);
 };

@@ -1,6 +1,5 @@
 @import "./global.scss";
 @import "./variables.scss";
-@import "./media.scss";
 @import "./mixins.scss";
 @import "./navigation.scss";
 @import "./leftside.scss";
@@ -12,10 +11,23 @@
 
 .main-site-container {
 	display: grid;
-	grid-template-columns: 250px 2fr 1fr;
+	grid-template-columns: 258px 2fr 1fr;
 	grid-template-rows: 1fr;
 	grid-gap: 1rem;
-	padding: 4.5rem 3rem 0 3rem;
+	padding: 4.5rem 3rem 0;
 	max-width: 1400px;
 	margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+	.main-site-container {
+		grid-template-columns: 225px 1fr;
+	}
+}
+
+@media (max-width: 830px) {
+	.main-site-container {
+		grid-template-columns: 1fr;
+		padding: 4.5rem 0.5rem 0;
+	}
 }
