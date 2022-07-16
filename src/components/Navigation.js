@@ -1,5 +1,7 @@
 import React from "react";
-import { FaDev, FaSearch, FaBell } from "react-icons/fa";
+import { FaDev } from "react-icons/fa";
+import { RiNotification4Line } from "react-icons/ri";
+import { FiSearch } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import { useState } from "react";
 
@@ -24,7 +26,7 @@ const Navigation = () => {
 						/>
 						<IconContext.Provider value={{ className: "search-logo" }}>
 							<button type='button' className='search-btn'>
-								<FaSearch />
+								<FiSearch />
 							</button>
 						</IconContext.Provider>
 					</form>
@@ -37,7 +39,7 @@ const Navigation = () => {
 					</button>
 				</li>
 				<li className='notification'>
-					<FaBell />
+					<RiNotification4Line />
 				</li>
 				<li className='li-img-container'>
 					<div

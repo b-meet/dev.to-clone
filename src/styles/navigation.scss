@@ -35,7 +35,7 @@
 	border: 1px solid $primary-dark-7;
 	outline: none;
 	width: 26.5rem;
-	background: $primary-dark-5;
+	background: $primary-dark;
 	height: 2.6rem;
 	padding: 0.5rem;
 	border-radius: $radius;
@@ -47,13 +47,12 @@
 	}
 
 	&:focus {
-		background: $primary-dark;
 		border: 2px solid $secondary-blue;
 	}
 }
 
 ::placeholder {
-	color: $primary-light-1;
+	color: $primary-dark-6;
 	font-size: 1rem;
 }
 
@@ -63,7 +62,7 @@
 	border: none;
 	cursor: pointer;
 	border-radius: $radius;
-	height: 95%;
+	height: 94%;
 	width: 2.5rem;
 	position: absolute;
 	right: 1px;
@@ -101,8 +100,10 @@
 
 .notification {
 	@include global-nav-child(center);
-	@include nav-logo-bg(1.1rem);
+	@include nav-logo-bg(1.5rem);
 	margin: 0.2rem;
+	border-radius: $radius;
+	color: aliceblue;
 
 	&:hover {
 		@include nav-logo-hover($primary-light);

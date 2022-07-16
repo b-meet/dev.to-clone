@@ -1,19 +1,6 @@
 import React from "react";
+import { FcPrivacy } from "react-icons/fc";
 import {
-	FcVideoCall,
-	FcHome,
-	FcReading,
-	FcTodoList,
-	FcShop,
-	FcLike,
-	FcPrivacy,
-	FcBusinessContact,
-} from "react-icons/fc";
-import {
-	FaMicrophone,
-	FaTags,
-	FaLightbulb,
-	FaDev,
 	FaThumbsUp,
 	FaHandPointRight,
 	FaTwitter,
@@ -22,78 +9,24 @@ import {
 	FaTwitch,
 } from "react-icons/fa";
 import { RiInstagramFill, RiSettingsLine } from "react-icons/ri";
+import Data from "./navigationData";
+import { tags } from "./navigationData";
 
 const LeftSide = () => {
 	return (
 		<aside className='complete-leftnav-container'>
 			<nav>
 				<ul className='main-navigation'>
-					<li>
-						<a href=''>
-							<FcHome />
-							<p>home</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FcReading />
-							<p>reading list</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FcTodoList />
-							<p>listings</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FaMicrophone />
-							<p>podcasts</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FcVideoCall />
-							<p>videos</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FaTags />
-							<p>tags</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FaLightbulb />
-							<p>FAQ</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FcShop />
-							<p>DEV shop</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FcLike />
-							<p>sponsors</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FaDev />
-							<p>about</p>
-						</a>
-					</li>
-					<li>
-						<a href=''>
-							<FcBusinessContact />
-							<p>contact</p>
-						</a>
-					</li>
+					{Data.map((item) => {
+						return (
+							<li>
+								<a href={item.link}>
+									{item.icon}
+									<p>{item.text}</p>
+								</a>
+							</li>
+						);
+					})}
 				</ul>
 			</nav>
 			<nav className='other-content-container'>
@@ -156,36 +89,13 @@ const LeftSide = () => {
 					</button>
 				</div>
 				<ul className='tags-list-container'>
-					<li>
-						<a href=''>#javascript</a>
-					</li>
-					<li>
-						<a href=''>#react</a>
-					</li>
-					<li>
-						<a href=''>#html</a>
-					</li>
-					<li>
-						<a href=''>#css</a>
-					</li>
-					<li>
-						<a href=''>#java</a>
-					</li>
-					<li>
-						<a href=''>#python</a>
-					</li>
-					<li>
-						<a href=''>#rust</a>
-					</li>
-					<li>
-						<a href=''>#angular</a>
-					</li>
-					<li>
-						<a href=''>#vue</a>
-					</li>
-					<li>
-						<a href=''>#webdev</a>
-					</li>
+					{tags.map((tag) => {
+						return (
+							<li>
+								<a href={tag.link}>{tag.tagName}</a>
+							</li>
+						);
+					})}
 				</ul>
 			</nav>
 			<section className='get-stickers'>

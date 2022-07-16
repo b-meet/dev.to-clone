@@ -1,8 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Article from "./Article";
-import SkeletonUI from "./SkeletonUI";
-import axios, { Axios } from "axios";
+import axios from "axios";
 
 const Center = (pageNumber) => {
 	const [info, setInfo] = useState([]);
