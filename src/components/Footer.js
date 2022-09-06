@@ -2,6 +2,7 @@ import React from "react";
 import { FaLeaf } from "react-icons/fa";
 
 function Footer() {
+	//chimpu anna
 	return (
 		<article className='outside-footer-container'>
 			<section className='footer-container'>
